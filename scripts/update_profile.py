@@ -198,7 +198,7 @@ def build_svg(theme: dict[str, str], stats: dict[str, Any]) -> str:
     activity.append(("Last Refresh:", stats["last_refresh"]))
     activity = activity[:4]
     activity_rows = [
-        row(label, value, 725 + index * 58, accent=True, value_x=1320)
+        row(label, value, 725 + index * 50, accent=True, value_x=1320)
         for index, (label, value) in enumerate(activity)
     ]
 
@@ -235,7 +235,7 @@ def build_svg(theme: dict[str, str], stats: dict[str, Any]) -> str:
   <path d="M710 642H1595" stroke="{theme['border']}" stroke-width="2" opacity="0.8"/>
   <text x="710" y="680" class="mono" fill="{theme['accent']}" font-size="30" font-weight="700">GitHub Activity</text>
   {''.join(activity_rows)}
-  <path d="M710 892H1595" stroke="{theme['border']}" stroke-width="2" opacity="0.55"/>
+  <path d="M710 900H1595" stroke="{theme['border']}" stroke-width="2" opacity="0.55"/>
   <rect x="20" y="22" width="1640" height="896" rx="34" fill="none" stroke="{theme['border']}" stroke-width="2"/>
 </svg>
 '''
